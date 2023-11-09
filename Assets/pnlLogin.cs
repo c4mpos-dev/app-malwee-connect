@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.UI;
+using TMPro;
 
 public class pnlLogin : MonoBehaviour
 {
@@ -13,14 +14,14 @@ public class pnlLogin : MonoBehaviour
     public GameObject panelSelectPF2;
     public GameObject panelSelectPJ2;
     public GameObject textSenhaError;
-    public Text email;
-    public Text senha;
+    public GameObject email;
+    public GameObject senha;
 
     public int verificador;
 
     public void ButtonEntrar()
     {
-        if (email.text != "grupomalwee@malwee.com" || senha.text != "jaejae" || verificador != 1)
+        if (email.GetComponent<TMP_InputField>().text != "grupomalwee@malwee.com" || senha.GetComponent<TMP_InputField>().text != "jaejae" || verificador != 1)
         {
             textSenhaError.SetActive(true);
         }
